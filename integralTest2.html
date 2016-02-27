@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+	<title>Integral Test Visualization</title>
+  <script src='integralTest2.js'>
+  </script>
+ </head>
+<body>
+	<form>
+		<input id="nSlider" type="range" min="2" max="21" value="10" oninput="this.form.nSliderVal.value=this.value"/><span>
+		<input id="nSliderVal" type="number" value="10" oninput="this.form.nSlider.value=this.value" /><br>
+		<input id="showSeries" type="checkbox" checked/> Show series<span>
+		<input id="showFunction" type="checkbox" checked/> Show function<br>
+		<input id="overUnder_over" type="radio" name="overUnder" value="above" checked /> Series bounded above by area under curve <br>
+		<input id="overUnder_under" type="radio" name="overUnder" value="below" /> Series bounded below by area under curve <br>
+		<input id="f1Overx" type="radio" name="fChoice" checked /> 
+			<math>
+				<mrow>
+					<mi>f</mi>
+					<mrow>
+						<mo>(</mo>
+						<mi>x</mi>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+				<mrow>
+					<mo>=</mo>
+					<mfrac>
+						<mn>1</mn>
+						<mi>x</mi>
+					</mfrac>
+				</mrow>
+			</math>
+		<span>
+		<input id="f1Overx2" type="radio" name="fChoice" />
+			<math>
+				<mrow>
+					<mi>f</mi>
+					<mrow>
+						<mo>(</mo>
+						<mi>x</mi>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+				<mrow>
+					<mo>=</mo>
+					<mfrac>
+						<mn>1</mn>
+						<msup>
+							<mi>x</mi>
+							<mn>2</mn>
+						</msup>
+					</mfrac>
+				</mrow>
+			</math>
+		<span>
+		<input id="f1Overx3" type="radio" name="fChoice" />
+			<math>
+				<mrow>
+					<mi>f</mi>
+					<mrow>
+						<mo>(</mo>
+						<mi>x</mi>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+				<mrow>
+					<mo>=</mo>
+					<mfrac>
+						<mn>1</mn>
+						<msup>
+							<mi>x</mi>
+							<mn>3</mn>
+						</msup>
+					</mfrac>
+				</mrow>
+			</math>
+		<span>
+		<input id="f1Overx101" type="radio" name="fChoice" />
+			<math>
+				<mrow>
+					<mi>f</mi>
+					<mrow>
+						<mo>(</mo>
+						<mi>x</mi>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+				<mrow>
+					<mo>=</mo>
+					<mfrac>
+						<mn>1</mn>
+						<msup>
+							<mi>x</mi>
+							<mn>1.01</mn>
+						</msup>
+
+					</mfrac>
+				</mrow>
+			</math>
+		<span>
+		<input id="f1OverSqrtx" type="radio" name="fChoice" />
+			<math>
+				<mrow>
+					<mi>f</mi>
+					<mrow>
+						<mo>(</mo>
+						<mi>x</mi>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+				<mrow>
+					<mo>=</mo>
+					<mfrac>
+						<mn>1</mn>
+						<msqrt>
+							<mi>x</mi>
+						</msqrt>
+					</mfrac>
+				</mrow>
+			</math>
+		<span>
+		<input id="f1Overx099" type="radio" name="fChoice" />
+			<math>
+				<mrow>
+					<mi>f</mi>
+					<mrow>
+						<mo>(</mo>
+						<mi>x</mi>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+				<mrow>
+					<mo>=</mo>
+					<mfrac>
+						<mn>1</mn>
+						<msup>
+							<mi>x</mi>
+							<mn>0.99</mn>
+						</msup>
+					</mfrac>
+				</mrow>
+			</math>
+		<span>
+		<input id="f1Over2x" type="radio" name="fChoice" />
+			<math>
+				<mrow>
+					<mi>f</mi>
+					<mrow>
+						<mo>(</mo>
+						<mi>x</mi>
+						<mo>)</mo>
+					</mrow>
+				</mrow>
+				<mrow>
+					<mo>=</mo>
+					<mfrac>
+						<mn>1</mn>
+						<msup>
+							<mn>2</mn>
+							<mi>x</mi>
+						</msup>
+					</mfrac>
+				</mrow>
+			</math>
+		</form>
+	<canvas id="canvas1" width="1200" height="500">
+	<p> Your browser doesn't support the canvas element.</p>
+	</canvas>
+ </body>
+</html>
